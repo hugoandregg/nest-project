@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: postgres
+    ports:
+      - '5432:5432'
+
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
